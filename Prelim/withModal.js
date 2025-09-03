@@ -51,13 +51,15 @@ function generateUsers() {
 
 
 
-          // Delete button removes the row
+          // Delete 
+
           document.getElementById("deleteUserBtn").onclick = () => {
             row.remove();
             bootstrap.Modal.getInstance(document.getElementById("userModal")).hide();
           };
 
-          // Edit button placeholder
+          // Edit 
+
           document.getElementById("editUserBtn").onclick = () => {
             const updatedName = document.getElementById("editName").value;
             const updatedAddress = document.getElementById("editAddress").value;
@@ -67,7 +69,7 @@ function generateUsers() {
             row.cells[0].textContent = updatedName.split(" ")[1] || updatedName; // Show first or last name
             row.cells[2].textContent = updatedEmail;
 
-            // Optionally update other fields or store changes
+            
 
             bootstrap.Modal.getInstance(document.getElementById("userModal")).hide();
            };
